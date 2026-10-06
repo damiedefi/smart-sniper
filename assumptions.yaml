@@ -1,0 +1,7 @@
+# Paper-trading assumptions. Shown in the UI's Assumptions panel. Edit freely.
+slippage_bps: 30
+fee_bps: 25
+starting_cash: 1000
+max_position_pct: 0.2
+cooldown_s: 30
+latency_note: "Copies are detected by polling followed wallets' trades, typically within 30 seconds. This is not a live order book."

@@ -1,0 +1,69 @@
+.follow-alert{padding:14px;border:1px solid var(--border);border-radius:10px;color:var(--text-muted);line-height:1.45}
+.follow-alert.success{border-color:rgba(139,197,63,.45);color:var(--cg-green)}
+.follow-alert.error{border-color:rgba(255,110,103,.5);color:#ff8a82}
+.follow-alert.loading{color:#e0b04d}
+.position-list{margin:10px 0 14px}
+.position-row{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid var(--border)}
+.position-row span{display:grid;gap:3px}
+.position-row small{font-size:10px;text-transform:none;letter-spacing:0}
+.position-row .avatar{width:30px;height:30px}
+
+/* --- token selection tray (search -> radar these tokens) --- */
+.token-queue{margin-top:10px}
+.queue-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.queue-chips{display:flex;flex-wrap:wrap;gap:7px}
+.queue-chip{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:5px 6px 5px 5px;font-size:12px}
+.queue-chip .avatar{width:18px;height:18px;font-size:8px}
+.queue-chip small{color:var(--text-muted);font-size:9px;text-transform:uppercase}
+.chip-x{background:none;border:0;color:var(--text-muted);cursor:pointer;font-size:14px;line-height:1;padding:0 2px}
+.chip-x:hover{color:#ff6e67}
+
+/* --- multi-instance paper-follow runs --- */
+.follow-runs-list{display:grid;gap:16px}
+.run-instance .card-title{align-items:flex-start}
+.run-instance .card-title>span:first-child{display:flex;flex-direction:column;gap:2px}
+.run-actions-inline{display:flex;align-items:center;gap:10px}
+.equity-block{margin:6px 0 16px}
+.equity-spark,.price-spark{width:100%;height:64px;display:block}
+.price-spark{height:140px}
+.equity-range{display:flex;justify-content:space-between;color:var(--text-muted);font-size:10px;margin-top:2px}
+.sparkline-empty{padding:14px 0;font-size:12px}
+.wallet-chip{display:inline-flex;align-items:center;gap:4px}
+.chip-copy{background:none;border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:11px;padding:2px 6px;cursor:pointer}
+.chip-copy:hover{border-color:var(--cg-green);color:var(--cg-green)}
+.chip-open{background:none;border:0;color:var(--text-muted);cursor:pointer;font-size:12px;padding:0 2px}
+.chip-open:hover{color:var(--cg-green)}
+
+/* --- token X-ray page: fixed fact-row overlap, added price chart + back button --- */
+.xray-page{position:relative}
+.xray-back{margin-bottom:14px}
+.xray-facts{display:grid;gap:0;margin-top:6px}
+.fact-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+.fact-row span{color:var(--text-muted)}
+.fact-row strong{font-weight:700}
+
+/* --- recency signal, heuristic-disclosure tooltip, and follow-run add/delete controls --- */
+.stale{color:#e0b04d}
+.info-tip{cursor:help;color:var(--text-muted);font-size:11px;border-bottom:1px dotted var(--text-muted);white-space:nowrap}
+.info-tip:hover{color:var(--text)}
+#follow-config-card{margin-bottom:16px}
+.run-delete-btn{color:#ff8a82;border-color:rgba(255,110,103,.35)}
+.run-delete-btn:hover{border-color:#ff6e67}
+
+/* --- fixed-height scroll for per-run tables, so many open positions/trades don't push the
+   next run instance far down the page --- */
+.table-scroll-fixed{max-height:260px;overflow-y:auto}
+.table-scroll-fixed thead th{position:sticky;top:0;background:var(--bg-elevated);z-index:1}
+
+/* --- recent-trades-derived recency signal on Radar candidates (complements the top_traders list) --- */
+.candidates-recent-filter{font-size:12px;color:var(--text-muted);white-space:nowrap;display:flex;align-items:center;gap:6px}
+.candidate-badges{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+.badge.recent{background:rgba(139,197,63,.16);color:var(--cg-green)}
+
+/* --- article-kit preview page (was a dead-end new tab, now renders the built kit in the SPA) --- */
+.kit-page{position:relative}
+.kit-asset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:12px 0 20px}
+.kit-asset{border:1px solid var(--border);border-radius:11px;padding:10px;background:var(--bg);display:flex;flex-direction:column;gap:8px}
+.kit-asset img{width:100%;border-radius:7px;display:block;background:#0f1511}
+.kit-asset span{font-size:11px;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kit-draft{white-space:pre-wrap;word-break:break-word;background:var(--bg);border:1px solid var(--border);border-radius:11px;padding:16px;font-size:13px;line-height:1.6;max-height:520px;overflow-y:auto;font-family:inherit;color:var(--text)}
